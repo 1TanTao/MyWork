@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	</head>
+	<style>
+		body {
+			background-image: url(img/a1.jpg);
+			background-size:100%
+		}
+		.s1{
+			font-size: 25px;
+		}
+		div{
+			margin-top: 10px;
+		}
+	</style>
+	<body>
+		<script type="text/javascript">
+			function checkuser(){
+				var name=document.getElementById("name") ;
+			
+				var pwd=document.getElementById("pwd") ;
+			
+				if(name.value==""|| pwd.value==""){
+					alert("登录名密码均不能为空！")
+				}else if(name.value=="sasa" && pwd.value=="123456"){
+					window.location.href='album.html';
+				}else{
+					alert("登录名或密码错误")
+				}
+			}
+		</script>
+    
+
+		<form  class="form-inline">
+			<div class="container">
+				<div>
+					<span class="s1">Please Log In</span>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				</div>
+				<div>
+					<input type="text" placeholder="Name" id="name" class="form-control" style="width: 350px;"/>
+				</div>
+				<div>
+					<input type="text" placeholder="PassWord" id="pwd" class="form-control" style="width: 350px;"/>
+				</div>
+				
+					<div><button="button1" onclick="checkuser()" id="login" class="btn btn-default btn-lg active" style="width: 350px;">Login</button></div>
+					
+					<div><button="button2" onclick="window.location.href='register.html'" class="btn btn-default btn-lg active" style="width: 350px;">Register</button></div>
+				
+			</div>
+		</form>
+	</body>
+</html>
