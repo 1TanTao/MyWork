@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-	</head>
-	<style>
-		body {
-			background-image: url(img/a1.jpg);
-			background-size:100%
-		}
-		.s1{
-			font-size: 25px;
-		}
-		div{
-			margin-top: 10px;
-		}
-	</style>
-	<body>
-		<script type="text/javascript">
-			function checkuser(){
-				var name=document.getElementById("name") ;
-			
-				var pwd=document.getElementById("pwd") ;
-			
-				if(name.value==""|| pwd.value==""){
-					alert("登录名密码均不能为空！")
-				}else if(name.value=="admin" && pwd.value=="123456"){
-					window.location.href='album.html';
-				}else{
-					alert("登录名或密码错误")
-				}
-			}
-		</script>
-    
 
-		<form  class="form-inline">
-			<div class="container">
-				<div>
-					<span class="s1">Please Log In</span>
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</div>
-				<div>
-					<input type="text" placeholder="Name" id="name" class="form-control" style="width: 350px;"/>
-				</div>
-				<div>
-					<input type="text" placeholder="PassWord" id="pwd" class="form-control" style="width: 350px;"/>
-				</div>
-				
-					<div><button="button1" onclick="checkuser()" id="login" class="btn btn-default btn-lg active" style="width: 350px;">Login</button></div>
-					
-					<div><button="button2" onclick="window.location.href='register.html'" class="btn btn-default btn-lg active" style="width: 350px;">Register</button></div>
-				
-			</div>
-		</form>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
+  <link href="css/back.css" rel="stylesheet" />
+</head>
+<style>
+
+</style>
+
+<body>
+  <script type="text/javascript">
+    function checkuser() {
+      var name = document.getElementById("name");
+      var pwd = document.getElementById("pwd");
+      if (name.value == "" || pwd.value == "") {
+        alert("登录名密码均不能为空！")
+      } else if (name.value == "admin" && pwd.value == "123456") {
+        window.location.href = 'album.html';
+      } else {
+        alert("登录名或密码错误")
+      }
+    }
+  </script>
+
+  <div class="wrap">
+
+    <div id="back">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+
+    <div class="login-header">
+
+    </div>
+
+    <div class='content'>
+      <!-- 旋转动画  -->
+      <div class="ui_base u_p3d">
+        <div class="ball_c"></div>
+        <div class="base u_p3d">
+          <div class="pan"></div>
+          <div class="ball_base u_p3d ball_1">
+            <div class="ball"></div>
+          </div>
+          <div class="ball_base u_p3d ball_2">
+            <div class="ball"></div>
+          </div>
+          <div class="ball_base u_p3d ball_3">
+            <div class="ball"></div>
+          </div>
+          <div class="ball_base u_p3d ball_4">
+            <div class="ball"></div>
+          </div>
+          <div class="ball_base u_p3d ball_5">
+            <div class="ball"></div>
+          </div>
+          <div class="ball_base u_p3d ball_6">
+            <div class="ball"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-box">
+        <div class="user-box">
+          <input autocomplete="off" onKeyDown={this.keyboard} type="text" placeholder="账号" />
+        </div>
+        <div class="pw-box">
+          <input autocomplete="off" onKeyDown={this.keyboard} type="password" placeholder="密码" />
+          />
+        </div>
+        <button onclick="checkuser()">登录</button>
+      </div>
+
+      <div id="title">XXXX XXXX</div>
+    </div>
+
+    <div class="footer">
+      <p>Copyright © 2000-2022 XXX版权所有</p>
+      <p>技术支持：湖南XXXX有限公司</p>
+    </div>
+
+  </div>
+
+
+</body>
+
 </html>
