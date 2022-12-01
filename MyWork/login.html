@@ -68,10 +68,10 @@
 
       <div class="login-box">
         <div class="user-box">
-          <input autocomplete="off" onKeyDown={this.keyboard} type="text" placeholder="账号" />
+          <input id="name" onkeydown="checkuser()" type="text" placeholder="账号" />
         </div>
         <div class="pw-box">
-          <input autocomplete="off" onKeyDown={this.keyboard} type="password" placeholder="密码" />
+          <input id="pwd"  onkeydown="checkuser()" type="password" placeholder="密码" />
           />
         </div>
         <button onclick="checkuser()">登录</button>
